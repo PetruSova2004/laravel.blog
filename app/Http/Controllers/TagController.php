@@ -14,7 +14,7 @@ class TagController extends Controller
     {
         $tag = Tag::where('slug', $slug)->firstOrFail();
         $posts = $tag->posts()->with('category')->orderBy('id', 'desc')->paginate(2);
-        return view('tags.show', compact('tag', 'posts', 'x'));
+        return view('tags.show', compact('tag', 'posts'));
     }
 
 }
