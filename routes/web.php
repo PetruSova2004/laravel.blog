@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//123
+
 Route::get('/', 'PostController@index')->name('home');
 Route::get('/article/{slug}', 'PostController@show')->name('posts.single');
 Route::get('/category/{slug}', 'CategoryController@show')->name('categories.single');
