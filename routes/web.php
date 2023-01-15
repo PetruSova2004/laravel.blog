@@ -20,7 +20,7 @@ Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin.index');
-    Route::resource('/categories', 'CategoryController@show');
+    Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/posts', 'PostController');
     Route::resource('/employees', 'EmployeeController');
